@@ -14,14 +14,14 @@
           <div class="card-body">
             <h5 class="card-title text-center">Login</h5>
             <div class="form-signin">
+            <label for="inputEmail">Email address</label>
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" v-model="email" placeholder="Email address" required>
-                
               </div>
               <hr>
+              <label for="inputPassword">Password</label>
               <div class="form-label-group">
                 <input type="password" id="inputPassword" v-model="password" class="form-control" placeholder="Password" required>
-                
               </div>
               <button class="btn btn-lg btn-primary btn-block text-uppercase"  v-on:click="login()">Login</button>
               <router-link :to="{ name: 'Register'}"><a class="d-block text-center mt-2 small">Register</a></router-link>
