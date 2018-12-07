@@ -1,0 +1,7 @@
+[
+    { "name": "spring roll", "ingredients": ["chicken","egg"], "price": 4.5}, 
+    { "name": "mushroom soup", "ingredients": ["mushroom"], "price": 3},
+    { "name": "egg & tomato soup", "ingredients": ["tomato","egg"], "price": 5 }
+    
+
+]
