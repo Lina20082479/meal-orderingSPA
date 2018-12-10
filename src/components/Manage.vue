@@ -129,15 +129,15 @@ export default {
 
     this.dishName = "";
     this.dishIngredients="";
-    this.dishPrice=0
+      this.dishPrice= 0
     },
-    async handleUpdate() {
+    async handleUpdate () {
       event.preventDefault()
       const result = await dishApi.updateDish(this.editDish)
       console.log(result)
       this.modalShow = false
     }
-  },
+  }
 }
 </script>
 
