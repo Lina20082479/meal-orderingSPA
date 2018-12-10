@@ -1,5 +1,5 @@
 describe('Login', () => {
-    it('successfully loads', () => {
+  before('successfully loads', () => {
         cy.visit('/login')
       })
       it('allows a valid user to sign in', () => {
@@ -7,6 +7,7 @@ describe('Login', () => {
         cy.get('#inputEmail').type('123456@wit.ie');
         cy.get('#inputPassword').type('123456');
         cy.get('.btn').click();
+        cy.wait(1000)
         cy.url().should('include', '/')
       });
 
