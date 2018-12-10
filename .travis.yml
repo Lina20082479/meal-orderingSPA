@@ -1,0 +1,15 @@
+dist: trusty
+language: node_js
+node_js:
+- "stable"
+cache:
+   directories:
+   - node_modules
+before_script:
+- npm install -g httpserver
+- npm run custom-build
+- cd dist && httpserver -p 8080 &
+script:
+- npx cypress run
+script:
+- npm run custom-build
