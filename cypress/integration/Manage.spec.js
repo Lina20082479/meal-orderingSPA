@@ -1,21 +1,21 @@
 describe('Manage', () => {
-    // before(function () {
-    //     cy.request('https://meal-ordering-wit.herokuapp.com/dishes/')
-    //       .its('body')
-    //       .then( (dishes) => {
-    //          dishes.forEach( (element) => {
-    //             cy.request('DELETE',
-    //                'https://meal-ordering-wit.herokuapp.com/dishes/' + element._id)
-    //          });
-    //       })
-    //       cy.fixture('dishes')
-    //         .then((dishes) => {
-    //             dishes.forEach((dish) => {
-    //               cy.request('POST',
-    //                  'https://meal-ordering-wit.herokuapp.com/dishes/', dish )
-    //             })
-    //       })
-    // }); 
+    before(function () {
+        cy.request('https://meal-ordering-wit.herokuapp.com/dishes/')
+          .its('body')
+          .then( (dishes) => {
+             dishes.forEach( (element) => {
+                cy.request('DELETE',
+                   'https://meal-ordering-wit.herokuapp.com/dishes/' + element._id)
+             });
+          })
+          cy.fixture('dishes')
+            .then((dishes) => {
+                dishes.forEach((dish) => {
+                  cy.request('POST',
+                     'https://meal-ordering-wit.herokuapp.com/dishes/', dish )
+                })
+          })
+    }); 
     beforeEach(function () {
         cy.visit('/login')
         cy.get('#inputEmail').type('root@meal.ie')
