@@ -24,6 +24,7 @@ describe('Home Page', () => {
         cy.wait(1000)
         cy.url().should('include', '/')
     })
+        
     describe('The user views the dishes', () => {
         it('allows a dish to be searched', () => {
             cy.get('#__BVID__16').type('so')
