@@ -13,5 +13,3 @@ script:
 - npx cypress run
 after_success:
 - npm run publish-coverage
-script:
-- npm run custom-build
